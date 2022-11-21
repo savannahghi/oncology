@@ -26,8 +26,8 @@ public class InOncologyProgramCalculation extends AbstractPatientCalculation {
 		CalculationResultMap map = new CalculationResultMap();
 		
 		CalculationResultMap lastScreeningEncounter = Calculations.lastEncounter(
-		    MetadataUtils.existing(EncounterType.class, OncologyScreeningMetadata._EhrEncounterTypes.ONCOLOGY_SCREENING), cohort,
-		    context);
+		    MetadataUtils.existing(EncounterType.class, OncologyScreeningMetadata._EhrEncounterTypes.ONCOLOGY_SCREENING),
+		    cohort, context);
 		for (Integer pId : cohort) {
 			boolean screened = false;
 			Encounter encounter = EmrCalculationUtils.encounterResultForPatient(lastScreeningEncounter, pId);
