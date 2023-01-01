@@ -512,11 +512,12 @@
                 } else if (value === 703) {
                     jq('#viaTreatmentPositiveResults *').prop('disabled', false);
                     jq('#viaTreatmentNegativeResults *').prop('disabled', true);
-                    jq('#thermalAblationOptions *').prop('disabled', true);
+                    jq('#thermalAblationOptions *').prop('disabled', false);
                 } else if (value === 159008) {
                     jq('#viaTreatmentPositiveResults *').prop('disabled', true);
                     jq('#viaTreatmentNegativeResults *').prop('disabled', true);
-                    jq('#thermalAblationOptions *').prop('disabled', false);
+
+                    jq('#thermalAblationOptions *').prop('disabled', true);
                 }
             });
         }
@@ -712,8 +713,8 @@
                     jq('#birads4 *').prop('disabled', true);
                     jq('#birads6 *').prop('disabled', false);
                 }else if (value === 1000093){
-                    jq('#birads0 *').prop('disabled', true);
-                    jq('#birads1 *').prop('disabled', false);
+                    jq('#birads0 *').prop('disabled', false);
+                    jq('#birads1 *').prop('disabled', true);
                     jq('#birads3 *').prop('disabled', true);
                     jq('#birads4 *').prop('disabled', true);
                     jq('#birads6 *').prop('disabled', true);
@@ -781,12 +782,12 @@
         function processFobtResponsesAndTreatment() {
             jq('#fobt input:radio').click(function () {
                 var value = parseInt(jq(this).val());
-                if (value === 159362) {
-                    jq('#fobtNegativeTreatmentOptions *').prop('disabled', false);
-                    jq('#fobtPositiveTreatmentOptions *').prop('disabled', true);
-                } else if (value === 664) {
+                if (value === 703) {
                     jq('#fobtNegativeTreatmentOptions *').prop('disabled', true);
                     jq('#fobtPositiveTreatmentOptions *').prop('disabled', false);
+                } else if (value === 664) {
+                    jq('#fobtNegativeTreatmentOptions *').prop('disabled', false);
+                    jq('#fobtPositiveTreatmentOptions *').prop('disabled', true);
                 }
             });
         }
@@ -1134,6 +1135,7 @@
                                     <th colspan="2">&nbsp;Cancer Screening</th>
                                 </tr>
                                 <tr>
+
                                     <td colspan="2">Visit type
 
                                         <div class="requiredInput">
@@ -1264,7 +1266,7 @@
                                                         <div id="viaSuspectForCancerOptions">
                                                             <obs conceptId="3ddc3275-66c2-40fc-9ed2-12c1725d50f9"
                                                                  answerConceptId="b4fe108d-c980-4451-99fb-6ef42e9a8dcc"
-                                                                 answerLabel="Referred for further management"
+                                                                 answerLabel="Perform biopsy and/or refer for further management"
                                                                  style="checkbox"/>
                                                         </div>
 
@@ -1277,7 +1279,7 @@
                                                         <obs conceptId="885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                                                              labelText="&lt;br/&gt;" answerSeparator="&lt;br/&gt;"
                                                              answerConceptIds="1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,145822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,145802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,145805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,122321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,155424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                                                             answerLabels="Normal,HSIL(ASCUS/ASC-H),LSIL,HSIL/CIS,AGUS,Invasive cancer"
+                                                             answerLabels="Normal,Atypical squamous cells(ASC-US/ASC-H),Low-grade squamous intraepithelial lesion(LSIL/CIN I),High grade squamous intraepithelial lesion(HSIL/CIN II or III/CIS),AGUS,Invasive cancer"
                                                              style="radio" id="papsmearResponses"/>
                                                     </td>
                                                     <td>
@@ -1388,7 +1390,7 @@
                                                             <div id="cbeAbnormalResultTreatmentOption">
                                                                 <obs conceptId="08fbc479-e0f9-4fff-93f0-2455bae05c66"
                                                                      answerConceptId="1609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                                                                     answerLabel="Counsel and refer for further management"
+                                                                     answerLabel="refer for triple assessment"
                                                                      style="checkbox"/>
                                                             </div>
                                                         </td>
@@ -1415,7 +1417,7 @@
                                                             <div id = "birads1">
                                                                 <obs conceptId="89875192-b834-4525-a021-e67c24e661f2"
                                                                      answerConceptId="432AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                                                                     answerLabel="Routine Ultra sound screening"
+                                                                     answerLabel="Routine mammography screening"
                                                                      style="checkbox"/>
                                                             </div>
                                                             <hr/>
@@ -1688,8 +1690,8 @@
                                                     <th>Trans-rectal ultrasound biopsy</th>
                                                     <td>
                                                         <obs conceptId="161164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                                                             answerConceptIds=" 6ca703a8-7461-4e7c-8703-b03b46aa981c,c49a8568-a56d-4c6e-afed-6be347c15fe0,158566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,3d629987-ee66-43d8-8532-f41ba00dc493,2b7a0b08-ca77-4df7-9508-b9f8913c2066"
-                                                             answerLabels="Benign,Inflammation (acute/chronic),Prostatic intraepithelial neoplasia (PIN),Adenocarcinoma,Other malignancies"
+                                                             answerConceptIds="1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,6ca703a8-7461-4e7c-8703-b03b46aa981c,c49a8568-a56d-4c6e-afed-6be347c15fe0,158566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,3d629987-ee66-43d8-8532-f41ba00dc493,2b7a0b08-ca77-4df7-9508-b9f8913c2066"
+                                                             answerLabels="Normal,Benign,Inflammation (acute/chronic),Prostatic intraepithelial neoplasia (PIN),Adenocarcinoma,Other malignancies"
                                                              style="radio" answerSeparator="&lt;br/&gt;"/>
                                                     </td>
                                                     <td>
@@ -1698,6 +1700,15 @@
                                                                  answerConceptId="8cba5f27-830a-4c87-8be1-6fd8a8ed228a"
                                                                  answerLabel="Referred for further evaluation"
                                                                  style="checkbox"/>
+                                                            <br/>
+                                                            <obs conceptId="68cdacd6-9fb9-4713-9cdc-8b590e152fc0"
+                                                                 answerConceptId="f056993d-5726-4553-8625-295a1abb5a13"
+                                                                 answerLabel="Counseled for negative results"
+                                                                 style="checkbox"/>
+                                                            <br/>
+                                                            <obs conceptId="68cdacd6-9fb9-4713-9cdc-8b590e152fc0"
+                                                                 answerConceptId="160523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                                 answerLabel="Routine follow-up" style="checkbox"/>
                                                         </div>
                                                     </td>
                                                 </tr>
