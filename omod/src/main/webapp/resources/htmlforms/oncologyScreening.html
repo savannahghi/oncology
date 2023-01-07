@@ -37,6 +37,7 @@
             processTransrectalResponsesAndTreatment();
             processUltrasoundResponsesAndTreatment();
             processMammographResponsesAndTreatment();
+            processBiradsResponse();
             displayTabs();
 
 
@@ -845,6 +846,19 @@
             });
         }
 
+        function processBiradsResponse() {
+            jq('#birad4').change(function() {
+                var value = parseInt(jq(this).val());
+                if(value === 1267){
+                    jq('#done').show();
+                    jq('#notDone').hide();
+                }else{
+                    jq('#done').hide();
+                    jq('#notDone').show();
+                }
+            });
+        }
+
     </script>
     <style>
         table.screening {
@@ -1447,6 +1461,28 @@
                                                                      answerConceptId="136785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                                                                      answerLabel="Tissue Diagnosis(U/S guided biopsy)"
                                                                      style="checkbox"/>
+                                                                <br/>
+                                                                    <obs conceptId="0054aae2-d945-47fd-8fba-8b515e780f41"
+                                                                         answerConceptIds="1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                                         answerLabels="Done,Not-Done"
+                                                                         style="checkbox"/>
+                                                                <br/>
+
+                                                                <div id="done">
+                                                                <obs conceptId="91181060-39a8-45fb-bd3b-b93506c9bea1"
+                                                                     answerConceptId="f056993d-5726-4553-8625-295a1abb5a13"
+                                                                     answerLabel="Negative-Counsel on negative results and review (provide review date)"
+                                                                     style="checkbox"/>
+                                                                    <br/>
+                                                                    Date screening done<br/>
+                                                                    <obs conceptId="23f45ac8-613a-4ece-b3d9-ac1697acc2ab"/>
+                                                                </div>
+                                                                <br/>
+                                                                <div id="notDone">
+                                                                Reason Not Done
+                                                                <obs conceptId="160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                                                                     id="other-symptom-text"/>
+                                                                </div>
                                                             </div>
                                                             <hr/>
                                                             <div id = "birads6">
