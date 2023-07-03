@@ -80,10 +80,6 @@
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>kenyaui-api</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.openmrs.module</groupId>
-			<artifactId>ehrconfigs-api</artifactId>
-		</dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>legacyui-omod</artifactId>
@@ -128,9 +124,5 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.openmrs.module</groupId>
-			<artifactId>hospitalcore-api</artifactId>
-		</dependency>
 	</dependencies>
 </project>

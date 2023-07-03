@@ -76,10 +76,6 @@
 			<artifactId>kenyaui-api</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.openmrs.module</groupId>
-			<artifactId>ehrconfigs-api</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.openmrs.web</groupId>
 			<artifactId>openmrs-web</artifactId>
             <scope>provided</scope>
@@ -89,10 +85,6 @@
 			<artifactId>openmrs-web</artifactId>
 			<scope>provided</scope>
 			<classifier>tests</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.openmrs.module</groupId>
-			<artifactId>hospitalcore-api</artifactId>
 		</dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
